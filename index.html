@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Site Metas -->
+    <title>E-Uphoria | JECRC </title>
+
+    <meta name="description" content="Responsive Retina-Friendly Menu with different, size-dependent layouts" />
+    <meta name="keywords" content="responsive menu, retina-ready, icon font, media queries, css3, transition, mobile" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <script src="js/modernizr.custom.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/30c21ac8e0.js"></script>
+
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="js/modernizr.js"></script>
+
+
+
+</head>
+
+
+
+<body id="page-top" class="politics_version">
+
+    <!-- LOADER -->
+    <!--    <div id="preloader">
+        <div class="loader">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+
+
+    <div class="container">
+        <!-- Codrops top bar -->
+
+        <header>
+            <center><img src="e%20logo.png" height="150"></center>
+        </header>
+        <div class="main clearfix">
+            <nav id="menu" class="nav">
+
+                <ul>
+                    <li>
+                        <a href="index.html">
+                            <span class="icon">
+									<i aria-hidden="true" class="icon-home"></i>
+								</span>
+                            <span><font color="#fff">Home</font></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <span class="icon"> 
+									<i aria-hidden="true" class="icon-services"></i>
+								</span>
+                            <span><font color="#fff">About Us</font></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#event">
+                            <span class="icon">
+									<i aria-hidden="true" class="icon-portfolio"></i>
+								</span>
+                            <span><font color="#fff">All Events</font></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#sponsor">
+                            <span class="icon">
+									<i aria-hidden="true" class="icon-contact"></i>
+								</span>
+                            <span><font color="#fff">Contact  Team</font></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- /container -->
+
+    <script>
+        //  The function to change the class
+        var changeClass = function(r, className1, className2) {
+            var regex = new RegExp("(?:^|\\s+)" + className1 + "(?:\\s+|$)");
+            if (regex.test(r.className)) {
+                r.className = r.className.replace(regex, ' ' + className2 + ' ');
+            } else {
+                r.className = r.className.replace(new RegExp("(?:^|\\s+)" + className2 + "(?:\\s+|$)"), ' ' + className1 + ' ');
+            }
+            return r.className;
+        };
+
+        //  Creating our button in JS for smaller screens
+        var menuElements = document.getElementById('menu');
+        menuElements.insertAdjacentHTML('afterBegin', '<button type="button" id="menutoggle" class="navtoogle" aria-hidden="true"><i aria-hidden="true" class="icon-menu"> </i> Menu</button>');
+
+        //  Toggle the class on click to show / hide the menu
+        document.getElementById('menutoggle').onclick = function() {
+            changeClass(this, 'navtoogle active', 'navtoogle');
+        }
+
+        // http://tympanus.net/codrops/2013/05/08/responsive-retina-ready-menu/comment-page-2/#comment-438918
+        document.onclick = function(e) {
+            var mobileButton = document.getElementById('menutoggle'),
+                buttonStyle = mobileButton.currentStyle ? mobileButton.currentStyle.display : getComputedStyle(mobileButton, null).display;
+
+            if (buttonStyle === 'block' && e.target !== mobileButton && new RegExp(' ' + 'active' + ' ').test(' ' + mobileButton.className + ' ')) {
+                changeClass(mobileButton, 'navtoogle active', 'navtoogle');
+            }
+        }
+    </script>
+
+
+
+    <script src="js/jssor.slider-28.1.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        window.jssor_1_slider_init = function() {
+
+            var jssor_1_SlideoTransitions = [
+                [{
+                    b: -1,
+                    d: 1,
+                    ls: 0.5
+                }, {
+                    b: 0,
+                    d: 1000,
+                    y: 5,
+                    e: {
+                        y: 6
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    ls: 0.5
+                }, {
+                    b: 200,
+                    d: 1000,
+                    y: 25,
+                    e: {
+                        y: 6
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    ls: 0.5
+                }, {
+                    b: 400,
+                    d: 1000,
+                    y: 45,
+                    e: {
+                        y: 6
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    ls: 0.5
+                }, {
+                    b: 600,
+                    d: 1000,
+                    y: 65,
+                    e: {
+                        y: 6
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    ls: 0.5
+                }, {
+                    b: 800,
+                    d: 1000,
+                    y: 85,
+                    e: {
+                        y: 6
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    ls: 0.5
+                }, {
+                    b: 500,
+                    d: 1000,
+                    y: 195,
+                    e: {
+                        y: 6
+                    }
+                }],
+                [{
+                    b: 0,
+                    d: 2000,
+                    y: 30,
+                    e: {
+                        y: 3
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    rY: -15,
+                    tZ: 100
+                }, {
+                    b: 0,
+                    d: 1500,
+                    y: 30,
+                    o: 1,
+                    e: {
+                        y: 3
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    rY: -15,
+                    tZ: -100
+                }, {
+                    b: 0,
+                    d: 1500,
+                    y: 100,
+                    o: 0.8,
+                    e: {
+                        y: 3
+                    }
+                }],
+                [{
+                    b: 500,
+                    d: 1500,
+                    o: 1
+                }],
+                [{
+                    b: 0,
+                    d: 1000,
+                    y: 380,
+                    e: {
+                        y: 6
+                    }
+                }],
+                [{
+                    b: 300,
+                    d: 1000,
+                    x: 80,
+                    e: {
+                        x: 6
+                    }
+                }],
+                [{
+                    b: 300,
+                    d: 1000,
+                    x: 330,
+                    e: {
+                        x: 6
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    r: -110,
+                    sX: 5,
+                    sY: 5
+                }, {
+                    b: 0,
+                    d: 2000,
+                    o: 1,
+                    r: -20,
+                    sX: 1,
+                    sY: 1,
+                    e: {
+                        o: 6,
+                        r: 6,
+                        sX: 6,
+                        sY: 6
+                    }
+                }],
+                [{
+                    b: 0,
+                    d: 600,
+                    x: 150,
+                    o: 0.5,
+                    e: {
+                        x: 6
+                    }
+                }],
+                [{
+                    b: 0,
+                    d: 600,
+                    x: 1140,
+                    o: 0.6,
+                    e: {
+                        x: 6
+                    }
+                }],
+                [{
+                    b: -1,
+                    d: 1,
+                    sX: 5,
+                    sY: 5
+                }, {
+                    b: 600,
+                    d: 600,
+                    o: 1,
+                    sX: 1,
+                    sY: 1,
+                    e: {
+                        sX: 3,
+                        sY: 3
+                    }
+                }]
+            ];
+
+            var jssor_1_options = {
+                $AutoPlay: 1,
+                $LazyLoading: 1,
+                $CaptionSliderOptions: {
+                    $Class: $JssorCaptionSlideo$,
+                    $Transitions: jssor_1_SlideoTransitions
+                },
+                $ArrowNavigatorOptions: {
+                    $Class: $JssorArrowNavigator$
+                },
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$,
+                    $SpacingX: 20,
+                    $SpacingY: 20
+                }
+            };
+
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+            /*#region responsive code begin*/
+
+            var MAX_WIDTH = 1600;
+
+            function ScaleSlider() {
+                var containerElement = jssor_1_slider.$Elmt.parentNode;
+                var containerWidth = containerElement.clientWidth;
+
+                if (containerWidth) {
+
+                    var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
+
+                    jssor_1_slider.$ScaleWidth(expectedWidth);
+                } else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+
+            ScaleSlider();
+
+            $Jssor$.$AddEvent(window, "load", ScaleSlider);
+            $Jssor$.$AddEvent(window, "resize", ScaleSlider);
+            $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
+            /*#endregion responsive code end*/
+        };
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,regular,italic,700,700italic&subset=latin-ext,greek-ext,cyrillic-ext,greek,vietnamese,latin,cyrillic" rel="stylesheet" type="text/css" />
+    <style>
+        /* jssor slider loading skin spin css */
+        
+        .jssorl-009-spin img {
+            animation-name: jssorl-009-spin;
+            animation-duration: 1.6s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        
+        @keyframes jssorl-009-spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        /*jssor slider bullet skin 132 css*/
+        
+        .jssorb132 {
+            position: absolute;
+        }
+        
+        .jssorb132 .i {
+            position: absolute;
+            cursor: pointer;
+        }
+        
+        .jssorb132 .i .b {
+            fill: #fff;
+            fill-opacity: 0.8;
+            stroke: #000;
+            stroke-width: 1600;
+            stroke-miterlimit: 10;
+            stroke-opacity: 0.7;
+        }
+        
+        .jssorb132 .i:hover .b {
+            fill: #000;
+            fill-opacity: .7;
+            stroke: #fff;
+            stroke-width: 2000;
+            stroke-opacity: 0.8;
+        }
+        
+        .jssorb132 .iav .b {
+            fill: #000;
+            stroke: #fff;
+            stroke-width: 2400;
+            fill-opacity: 0.8;
+            stroke-opacity: 1;
+        }
+        
+        .jssorb132 .i.idn {
+            opacity: 0.3;
+        }
+        
+        .jssora051 {
+            display: block;
+            position: absolute;
+            cursor: pointer;
+        }
+        
+        .jssora051 .a {
+            fill: none;
+            stroke: #fff;
+            stroke-width: 360;
+            stroke-miterlimit: 10;
+        }
+        
+        .jssora051:hover {
+            opacity: .8;
+        }
+        
+        .jssora051.jssora051dn {
+            opacity: .5;
+        }
+        
+        .jssora051.jssora051ds {
+            opacity: .3;
+            pointer-events: none;
+        }
+    </style>
+    <svg viewbox="0 0 0 0" width="0" height="0" style="display:block;position:relative;left:0px;top:0px;">
+        <defs>
+            <filter id="jssor_1_flt_1" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stddeviation="4"></feGaussianBlur>
+            </filter>
+            <radialGradient id="jssor_1_grd_2">
+                <stop offset="0" stop-color="#fff"></stop>
+                <stop offset="1" stop-color="#000"></stop>
+            </radialGradient>
+            <mask id="jssor_1_msk_3">
+                <path fill="url(#jssor_1_grd_2)" d="M600,0L600,400L0,400L0,0Z" x="0" y="0" style="position:absolute;overflow:visible;"></path>
+            </mask>
+        </defs>
+	
+
+    </svg>
+    <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:1600px;height:560px;overflow:hidden;visibility:hidden;">
+
+        <!-- Loading Screen -->
+        <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+            <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+        </div>
+        <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1600px;height:560px;overflow:hidden;">
+            <div style="background-color:#d3890e;">
+                <img data-u="image" style="opacity:;" data-src="img/pb-beer-1513436-1600.jpg" />
+                <a href="https://forms.gle/c4CMRyBQ9Zxx9z6b8">
+                    <div data-ts="flat" data-p="275" data-po="40% 50%" style="left:150px;top:40px;width:800px;height:300px;position:absolute;">
+                        <div data-to="50% 50%" data-t="0" style="left:50px;top:520px;width:400px;height:100px;position:absolute;color:#1F4D7B;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;letter-spacing:0.5em;">TECHNICAL</div>
+                        <div data-to="50% 50%" data-t="1" style="left:50px;top:540px;width:400px;height:100px;position:absolute;opacity:0.5;color:#1F4D7B;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;letter-spacing:0.5em;">TECHNICAL</div>
+                        <div data-to="50% 50%" data-t="2" style="left:50px;top:560px;width:400px;height:100px;position:absolute;opacity:0.25;color:#1F4D7B;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;letter-spacing:0.5em;">TECHNICAL</div>
+                        <div data-to="50% 50%" data-t="3" style="left:50px;top:580px;width:400px;height:100px;position:absolute;opacity:0.125;color:#1F4D7B;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;letter-spacing:0.5em;">TECHNICAL</div>
+                        <div data-to="50% 50%" data-t="4" style="left:50px;top:600px;width:400px;height:100px;position:absolute;opacity:0.06;color:#1F4D7B;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;letter-spacing:0.5em;">TECHNICAL</div>
+                        <div data-to="50% 50%" data-t="5" style="left:50px;top:710px;width:700px;height:100px;position:absolute;color:#1F4D7B;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;letter-spacing:0.5em;">EVENT</div>
+                        <div data-to="50% 50%" data-t="5" style="left:50px;top:70%;width:2000px;height:100px;position:absolute;color:#1F4D7B;font-family:'Roboto Condensed',sans-serif;font-size:44px;font-weight:900;letter-spacing:0.5em;">REGISTER NOW!</div>
+
+                    </div>
+                </a>
+            </div>
+            <!--     <div>
+                <img data-u="image" data-src="img/px-apartment-chairs-contemporary-2015560-1600.jpg" />
+                <div data-ts="flat" data-p="540" data-po="40% 50%" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                    <div data-to="50% 50%" data-ts="preserve-3d" data-t="6" style="left:350px;top:360px;width:900px;height:500px;position:absolute;">
+                        <svg viewbox="0 0 800 60" data-to="50% 50%" width="800" height="60" data-t="7" style="left:0px;top:-70px;display:block;position:absolute;opacity:0;font-family:'Roboto Condensed',sans-serif;font-size:60px;font-weight:700;letter-spacing:0.05em;overflow:visible;">
+                            <text fill="#454447" stroke="#ff9500" stroke-width="2" text-anchor="middle" x="400" y="60">INTERIOR DESIGN
+                            </text>
+                        </svg>
+                        <div data-to="50% 50%" data-t="8" style="filter:url('#jssor_1_flt_1');left:200px;top:0px;width:600px;height:60px;position:absolute;opacity:0;color:#C49D8F;font-family:Roboto Condensed, sans-serif;font-size:48px;line-height:1.2;letter-spacing:0.1em;text-align:center;">FOR STYLISH LIFE</div>
+                        <svg viewbox="0 0 800 100" width="800" height="100" data-t="9" style="left:40px;top:250px;display:block;position:absolute;opacity:0;font-family:'Roboto Condensed',sans-serif;font-size:100px;font-weight:900;letter-spacing:0.5em;overflow:visible;">
+                            <text fill="rgba(255,255,255,0.7)" stroke="#ff9500" text-anchor="middle" x="400" y="100">BRAND NAME
+                            </text>
+                        </svg>
+                    </div>
+                </div>
+            </div>   -->
+            <div style="background-color:#000000;">
+                <img data-u="image" style="opacity:0.8;" data-src="img/px-back-view-boats-couple-2612852-1600.jpg" />
+                <a href="https://forms.gle/FcxJwQqJTRbNMCmQ6">
+                    <div data-ts="flat" data-p="1080" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                        <svg viewbox="0 0 600 400" data-ts="preserve-3d" width="600" height="400" data-tchd="jssor_1_msk_3" style="left:255px;top:0px;display:block;position:absolute;overflow:visible;">
+                        <g mask="url(#jssor_1_msk_3)">
+                            <path data-to="300px -180px" fill="none" stroke="rgba(250,251,252,0.5)" stroke-width="20" d="M410-350L410-10L190-10L190-350Z" x="190" y="-350" data-t="10" style="position:absolute;overflow:visible;"></path>
+                        </g>
+                    </svg>
+                        <svg viewbox="0 0 800 72" data-to="50% 50%" width="800" height="72" data-t="11" style="left:-800px;top:78px;display:block;position:absolute;font-family:'Roboto Condensed',sans-serif;font-size:84px;font-weight:900;overflow:visible;">
+                        <text fill="#fafbfc" text-anchor="middle" x="400" y="72">CULTURAL
+                        </text>
+                    </svg>
+                        <svg viewbox="0 0 800 72" data-to="50% 50%" width="800" height="72" data-t="12" style="left:1600px;top:153px;display:block;position:absolute;font-family:'Roboto Condensed',sans-serif;font-size:60px;font-weight:900;overflow:visible;">
+                        <text fill="#fafbfc" text-anchor="middle" x="400" y="72">EVENT
+                        </text>
+                    </svg>
+                        </svg>
+                        <svg viewbox="0 0 800 72" data-to="50% 50%" width="800" height="72" data-t="12" style="left: -800px;top: 300px;display:block;position:absolute;font-family:'Roboto Condensed',sans-serif;font-size:60px;font-weight:900;overflow:visible;">
+                        <text fill="#fafbfc" text-anchor="middle" x="400" y="72">Register now!
+                        </text>
+                    </svg>
+
+                    </div>
+                </a>
+            </div>
+            <!--        <div>
+                <img data-u="image" data-src="img/yamamoto.jpg" />
+                <div data-ts="flat" data-p="1080" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                    <div data-to="50% 50%" data-t="13" style="left:100px;top:-20px;width:800px;height:200px;position:absolute;opacity:0;">
+                        <div style="left:94px;top:35px;width:480px;height:90px;position:absolute;color:rgba(74,217,205,0.5);font-family:'Roboto Condensed',sans-serif;font-size:72px;line-height:1.2;">CREATION</div>
+                        <div style="left:307px;top:115px;width:400px;height:50px;position:absolute;color:rgba(74,217,205,0.5);font-family:'Roboto Condensed',sans-serif;font-size:42px;line-height:1.1;text-align:center;background-color:rgba(72,77,76,0.5);">for creative peoples</div>
+                    </div>
+                </div>
+            </div>    -->
+            <div>
+                <img data-u="image" data-src="img/wine-1600.jpg" />
+
+                <div data-ts="flat" data-p="1080" style="left:0px;top:0px;width:1600px;height:560px;position:absolute;">
+                    <a href="https://forms.gle/aFe4YuVoRprZfhqFA
+">
+                        <div data-to="50% 50%" data-t="14" style="left:690px;top:140px;width:600px;height:150px;position:absolute;opacity:0;color:#ffffff;font-family:Georgia,'Times New Roman',Times,serif;font-size:60px;line-height:1.2;letter-spacing:0.1em;">SPORTS
+                            <BR />EVENT
+                            <br>Register Now!
+                        </div>
+
+                    </a>
+
+                </div>
+            </div>
+        </div><a data-scale="0" href="https://www.jssor.com" style="display:none;position:absolute;">slider html</a>
+        <!-- Bullet Navigator -->
+        <div data-u="navigator" class="jssorb132" style="position:absolute;bottom:24px;right:16px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+            <div data-u="prototype" class="i" style="width:12px;height:12px;">
+                <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                    <circle class="b" cx="8000" cy="8000" r="5800"></circle>
+                </svg>
+            </div>
+        </div>
+        <!-- Arrow Navigator -->
+        <div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+            </svg>
+        </div>
+        <div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+            <svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                <polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+            </svg>
+        </div>
+    </div>
+    <script type="text/javascript">
+        jssor_1_slider_init();
+    </script>
+
+    <!-- Navigation -->
+    <!--  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+			<img class="img-fluid" src="e%20logo%20-%20Copy.png">
+		</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#event">Event</a>
+            </li>
+        
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#testimonials">Sponsor Us</a>
+            </li>
+              
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#blog">FAQ'S</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+-->
+
+    <!--
+	<div id="home" class="ct-header ct-header--slider ct-slick-custom-dots">
+		<div class="ct-slick-homepage" data-arrows="true" data-autoplay="false">
+
+			<div class="ct-header tablex item" background="images/banner-01.jpg">
+				<div class="ct-u-display-tablex">
+					<div class="inner">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-8 col-lg-8 slider-inner">
+									<h1 class="big animated"><font face="Amsterdam one" size="200px"><strong>E-uphoria</strong></font></h1>
+									<p class="animated"><font face="Abril Fatface" size="3"><strong><center>Fiesta of Talent and Imagination</center></strong></font></p>
+									<a class="btn-new from-middle animated" href="#">&nbsp;TECHNICAL</a><br>
+                                    <a class="btn-new from-middle animated" href="#">&nbsp;&nbsp;CULTURAL&nbsp;</a><br>
+                                    <a class="btn-new from-middle animated" href="#"><center>&nbsp;&nbsp;&nbsp;&nbsp;SPORTS &nbsp;&nbsp;&nbsp;&nbsp;</center></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			
+
+			
+			
+		</div>
+	</div> 
+
+    -->
+
+    <div id="about" class="section wb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">
+                        <h2>
+                            <center>About US</center>
+                        </h2>
+                        <p>JECRC university is back with another exciting and fun virtual fest, which is never seen before:<strong> E-uphoria</strong>. </p>
+                        <p>Get ready to learn diverse skills, flutter or share your opinions on topic of your choice. Maybe you will find yourself interested in a combating solo with the enemy or playing treasure hunt with your closest. Experience the beats
+                            of music and dance to your own rhythm. Fuse all your skills and talents to defeat your opponents. OUT HUSTLE, OUT WORK, OUT THINK, OUTPLAY, OUTLAST! Register yourself and be a part of a journey full of enthusiasm, fun and excitement
+                            !
+                        </p>
+                        <p><strong>JECRC University</strong> with its decade long background has tried to provide the best education, research innovation, job opportunities and overall development to its students. It has created a platform that provides
+                            world-class education and ethical values which help growing India along with making its mark in the globe.</p>
+
+                        <ul>
+                            <li><b>Follow Us</b></li>
+                            <li><a href="https://www.facebook.com/JecrcUniversity/"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/jecrcuniversity?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="https://in.linkedin.com/school/jecrcuniversity/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.instagram.com/jecrcuniversity/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+
+                        </ul>
+
+
+                        <!--    <a class="btn-new from-middle animated" href="#">button</a>  -->
+                    </div>
+                    <!-- end messagebox -->
+                </div>
+                <!-- end col -->
+
+                <div class="col-md-6">
+                    <div class="right-box-pro wow fadeIn">
+                        <img src="jecrc.png" alt="" class="img-fluid img-rounded fat-ab">
+                    </div>
+                    <!-- end media -->
+                </div>
+                <!-- end col -->
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end section -->
+    <!--
+    <div id="services" class="section lb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Services</h3>
+                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
+            </div>
+
+            <div class="row">
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-idea-1"></i>
+						</div>
+						<h2>Graphic Design</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div> 
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-discuss-issue"></i>
+						</div>
+						<h2>Support</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div> 
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-idea"></i>
+						</div>
+						<h2>Web Idea</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div> 
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-seo"></i>
+						</div>
+						<h2>Web Development</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div> 
+                <div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-development"></i>
+						</div>
+						<h2>Responsive Design</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div> 
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-process"></i>
+						</div>
+						<h2>Creative Design</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div> 
+            </div> 
+        </div> 
+    </div>
+
+	<div id="portfolio" class="section lb">
+		<div class="container">
+			<div class="section-title text-center">
+                <h3>Portfolio</h3>
+                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
+            </div> 
+			<div class="gallery-menu text-center row">
+				<div class="col-md-12">
+					<div class="button-group filter-button-group">
+						<button class="btn-new from-middle animated active" data-filter="*">All</button>
+						<button class="btn-new from-middle animated" data-filter=".gal_a">Web Development</button>
+						<button class="btn-new from-middle animated" data-filter=".gal_b">Creative Design</button>
+						<button class="btn-new from-middle animated" data-filter=".gal_c">Graphic Design</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="gallery-list row">
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_b">
+					<div class="gallery-single spi-hr fix hover">
+						<img src="uploads/gallery_img-01.jpg" class="img-fluid" alt="Image">
+						<div class="text-hover">
+							<h3>App design</h3>
+							<h4>Lorem ipsum</h4>
+						</div>
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-01.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_b">
+					<div class="gallery-single spi-hr fix">
+						<img src="uploads/gallery_img-02.jpg" class="img-fluid" alt="Image">
+						<div class="text-hover">
+							<h3>Logo design</h3>
+							<h4>Lorem ipsum</h4>
+						</div>
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
+					<div class="gallery-single spi-hr fix">
+						<img src="uploads/gallery_img-03.jpg" class="img-fluid" alt="Image">
+						<div class="text-hover">
+							<h3>App design</h3>
+							<h4>Lorem ipsum</h4>
+						</div>
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-03.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_b gal_a">
+					<div class="gallery-single spi-hr fix">
+						<img src="uploads/gallery_img-04.jpg" class="img-fluid" alt="Image">
+						<div class="text-hover">
+							<h3>Logo design</h3>
+							<h4>Lorem ipsum</h4>
+						</div>
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-04.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_a gal_c">
+					<div class="gallery-single spi-hr fix">
+						<img src="uploads/gallery_img-05.jpg" class="img-fluid" alt="Image">
+						<div class="text-hover">
+							<h3>App design</h3>
+							<h4>Lorem ipsum</h4>
+						</div>
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-05.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4 col-sm-6 gallery-grid gal_c gal_a">
+					<div class="gallery-single spi-hr fix">
+						<img src="uploads/gallery_img-06.jpg" class="img-fluid" alt="Image">
+						<div class="text-hover">
+							<h3>Logo design</h3>
+							<h4>Lorem ipsum</h4>
+						</div>
+						<div class="img-overlay">
+							<a href="uploads/gallery_img-06.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	-->
+
+
+    <!-- Accordion  -->
+
+    <div class="container" id="event">
+        <div class="row">
+            <div class="col-sm-12">
+                <p><strong><center><font size="50px">All Events</font></center></strong></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="nav nav-tabs">
+
+                    <li><a data-toggle="tab" href="#tab1" aria-selected="true" class="active"><strong>TECHNICAL</strong></a></li>
+                    <li><a data-toggle="tab" href="#tab2" aria-selected="false"><strong>CULTURAL</strong></a></li>
+                    <li><a data-toggle="tab" href="#tab3" aria-selected="false"><strong>SPORTS</strong></a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="tab-content">
+                    <div id="tab1" class="tab-pane fade show active">
+                        <div class="accordion">
+                            <div class="card">
+                                <div class="card-header" id="infraOne">
+                                    <a href="#collapseOne" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        <p class="mb-0">
+                                            1. Py Concede
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="infraOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        The Python Programming :<br> The event aims at testing the python concepts. Prelims will test your basic knowledge about Python. Finals consists of a challenge of applying the Python Programming Concepts along with
+                                        exploiting the Knowledge of functions in the core libraries which provide the “look and feel’ to the application/Operators.
+
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/Py%20Concede.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- close card-->
+                            <div class="card">
+                                <div class="card-header" id="infraTwo">
+                                    <a href="#collapseTwo" class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <p class="mb-0">2. Neologic</p>
+                                    </a>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="infraTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        The C programming :<br>The event aims at testing the C concepts. Prelims will test your basic knowledge about C. Finals consists of a challenge of applying the C Programming Concepts along with exploiting the Knowledge
+                                        of functions in the core libraries which provide the “look and feel’ to the application/Operators.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/NEOLOGIC%20%E2%80%93%20Think%20you%20know%20C.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card-->
+                            <div class="card">
+                                <div class="card-header" id="infraThree">
+                                    <a href="#collapseThree" class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                        <p class="mb-0">3. 0 Start - A learning to graphics and editing tool</p>
+                                    </a>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="infraThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        The event is for beginning a career in graphics & UI designing or just learning the basics of it. Whether you are a photographer, a designer, a blogger or a layman, it’s for all. If you want to put beautiful images in any social network, Photoshop skills
+                                        are a must-have. This one-day workshop makes you learn Adobe Photoshop, Tools, Making graphics, Web Layouts, Image editing, Coloring and UI Techniques from scratch.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/0%20Start.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card-->
+                        </div>
+                        <div class="accordion">
+                            <div class="card">
+                                <div class="card-header" id="infrafour">
+                                    <a href="#collapsefour" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                                        <p class="mb-0">
+                                            4. Flutteristic
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="collapsefour" class="collapse" aria-labelledby="infrafour" data-parent="#accordion">
+                                    <div class="card-body">
+                                        This event aims at testing the Flutter Concepts. It will be a two-round event consisting of a session on Flutter and a competition in which an app homepage has to be developed by the elements provided to the participants.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/FLUTTERISTIC%20.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- close card-->
+                            <div class="card">
+                                <div class="card-header" id="infrafivr">
+                                    <a href="#collapsefive" class="collapsed" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                                        <p class="mb-0">5. Deride Placement </p>
+                                    </a>
+                                </div>
+                                <div id="collapsefive" class="collapse" aria-labelledby="infraTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        As the name suggests, this event refers to a ‘mock’ placement round for all the undergraduate students who would be sitting for campus placements shortly. The best part of this event is that all the UG students from various branches/fields can participate
+                                        in this event.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/DERIDE%20THE%20PLACEMENT.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card-->
+                            <div class="card">
+                                <div class="card-header" id="infrasix">
+                                    <a href="#collapsesix" class="collapsed" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                                        <p class="mb-0">6. Capture the Flag</p>
+                                    </a>
+                                </div>
+                                <div id="collapsesix" class="collapse" aria-labelledby="infrasix" data-parent="#accordion">
+                                    <div class="card-body">
+                                        The traditional outdoor game of CTF, each team has a flag planted in its base. To win, you must capture your opponent’s flag and bring it back to your own base – a concept that has been adapted widely to different contexts such as first-person shooter
+                                        video games. In the realm of cyber security, the flag is a digital one that can be as simple as a sequence of characters hidden in a database. Competitors will have to identify and exploit
+                                    </div>
+                                    <div>
+                                        <center><a href=""><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="infraseven">
+                                    <a href="#collapseseven" class="collapsed" data-toggle="collapse" data-target="#collapseseven" aria-expanded="false" aria-controls="collapseseven">
+                                        <p class="mb-0">7. Ethos Management - A secret to social media's reality</p>
+                                    </a>
+                                </div>
+                                <div id="collapseseven" class="collapse" aria-labelledby="infraseven" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Social media offers connectivity, but it is important to find a balance. Learn about how it is changing our perceptions of ourselves, others, and the world. In this panel discussion, you will get to know more about Social Media, the dark side of it. We
+                                        will be inviting YouTubers and bloggers for this panel discussion.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/Ethos%20Management%20A%20secret%20to%20social%20media's%20reality.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="infraeight">
+                                    <a href="#collapseeight" class="collapsed" data-toggle="collapse" data-target="#collapseeight" aria-expanded="false" aria-controls="collapseeight">
+                                        <p class="mb-0">8. Hack the idea - where ideation meets implementation</p>
+                                    </a>
+                                </div>
+                                <div id="collapseeight" class="collapse" aria-labelledby="infraeight" data-parent="#accordion">
+                                    <div class="card-body">
+                                        A 24 hours event in which teams (computer programmers and software development, including graphic designers, interface designers, project managers, and often including subject-matter-experts, collaborator) have to develop an application or software-based
+                                        or hardware-based solution to the given problem statement. The focus will primarily be on the product developed.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/Hack%20the%20idea.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- card-->
+                        </div>
+                        <!-- accordion-->
+                    </div>
+                    <!-- tab 1-->
+                    <div id="tab2" class="tab-pane fade">
+                        <div class="accordion">
+                            <div class="card">
+                                <div class="card-header" id="aboutOne">
+                                    <a href="#collapseFour" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseOne">
+                                        <p class="mb-0">1. Act-o-Mania </p>
+                                    </a>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="aboutOne" data-parent="#accordion">
+                                    <div class="card-body">
+                                        This competition is for all the drama enthusiasts. They will have to present their acting and narrating skills through act presentation. They will be either given topics to act up on or will be given options to choose from Entry fee per member - 50rs
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/cu.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="aboutTwo">
+                                    <a href="#collapseFive" class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseTwo">
+                                        <p class="mb-0">2. Fashion Braganza </p>
+                                    </a>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="aboutTwo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        This event promotes fashion without vugarity. Participant has to submit her/his video doing ramp walk.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/cu.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="aboutThree">
+                                    <a href="#collapseSix" class="collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseThree">
+                                        <p class="mb-0">3. Open-Mic</p>
+                                    </a>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="aboutThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Open Mic is a fun active for all the entertainer who are full of entertainment, entertainment and entertainment Platform for poets, stand up comedy, story tellers and role, the best entertainer will get exciting prize and vouchers Entry fee per student-50rs.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/cu.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="aboutfour">
+                                    <a href="#collapseSeven" class="collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapsefour">
+                                        <p class="mb-0">4. Mann ki baat</p>
+                                    </a>
+                                </div>
+                                <div id="collapseSeven" class="collapse" aria-labelledby="aboutfour" data-parent="#accordion">
+                                    <div class="card-body">
+                                        This event is for all the people who love to express their views and opinions on the topic they will be given to speak upon through literary commands. It will consist of 3 where in the best 10 will compete in 2nd round to move to the final sand win the
+                                        award for the best Debater. Entry fee per member-50rs
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/cu.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="aboutfive">
+                                    <a href="#collapseEight" class="collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapsefive">
+                                        <p class="mb-0">5. Comic Saga </p>
+                                    </a>
+                                </div>
+                                <div id="collapseEight" class="collapse" aria-labelledby="aboutfive" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Students will participate in the fun quiz filled with questions and rounds regarding their favourite shows and movies like marvel, friends, harry potter and many more. It will consist of 2 preliminary rounds and final rounds. The type of questions will
+                                        be diverse and fun filled. It will be held through zoom platform. Entry fee per member-50rs
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/cu.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="aboutsix">
+                                    <a href="#collapseNine" class="collapsed" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapsesix">
+                                        <p class="mb-0">6. Dyansty Of Dance </p>
+                                    </a>
+                                </div>
+                                <div id="collapseNine" class="collapse" aria-labelledby="aboutsix" data-parent="#accordion">
+                                    <div class="card-body">
+                                        It is going to be an online dance competition having categories of solo performances.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/cu.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="aboutseven">
+                                    <a href="#collapseTen" class="collapsed" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseseven">
+                                        <p class="mb-0">7. Melody Of Chords</p>
+                                    </a>
+                                </div>
+                                <div id="collapseTen" class="collapse" aria-labelledby="aboutseven" data-parent="#accordion">
+                                    <div class="card-body">
+                                        The world of music is captivating, bright, and diverse. We all enjoy a good piece of melody, heartbroken, oralazy after noon shower,music has own edits taste ful way to work up your dopamine. Having said that, a professional in this arena will always
+                                        know how to adjust their tone, have consistency and create each note distinct from the other to create an intended musical effect. It's time to witness the vocalist in you, the craft that you have precisely bead,
+                                        you’re astoundin
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/cu.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="abouteight">
+                                    <a href="#collapseEleven" class="collapsed" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseeight">
+                                        <p class="mb-0">8. Treasure Hunt</p>
+                                    </a>
+                                </div>
+                                <div id="collapseEleven" class="collapse" aria-labelledby="abouteight" data-parent="#accordion">
+                                    <div class="card-body">
+                                        A team off our members will have to solve some fun and intellectual clues to find the final treasure through platforms. It will have one round only the first team to get the treasure wins the game. Fee per person-50rs
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/cu.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- accordion-->
+                    </div>
+                    <!-- tab2 -->
+
+                    <div id="tab3" class="tab-pane fade">
+                        <div class="accordion">
+                            <div class="card">
+                                <div class="card-header" id="infranine">
+                                    <a href="#collapsenine" data-toggle="collapse" data-target="#collapsenine" aria-expanded="false" aria-controls="collapsenine">
+                                        <p class="mb-0">
+                                            1. I Bet You
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="collapsenine" class="collapse" aria-labelledby="infranine" data-parent="#accordion">
+                                    <div class="card-body">
+                                        I Bet You is a fun and challenging event. It will consist of two teams who will be betting over each other to perform various fitness challenges and fun questionnaire. For every winning bet, the respective team will be awarded points and points will be
+                                        awarded to the opponent team if the team is unable to perform the claimed bet. The challenges will include plank, push-up, fun questionnaire related to sports and various other fitness challenges. So all the gym
+                                        freaks and sports enthusiasts must gear up and be ready to CHALLENGE!
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/E-Sports%20events%20Rule%20Book.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- close card-->
+                            <div class="card">
+                                <div class="card-header" id="infraten">
+                                    <a href="#collapseten" data-toggle="collapse" data-target="#collapseten" aria-expanded="false" aria-controls="collapseten">
+                                        <p class="mb-0">
+                                            2. IPL Auction
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="collapseten" class="collapse" aria-labelledby="infraten" data-parent="#accordion">
+                                    <div class="card-body">
+                                        An event for everyone who not only just loves the game of cricket, but also analyses it to the limit. This event makes you the don of the hat of a bidder. You need to manage your budget and you can strategize to make the best possible team competing against
+                                        other opponents who will give you a run for your money, quite literally. If you love cricket, if you have followed IPL and if you can mix common sense with passion into your bidding strategy, this event is a must
+                                        for you.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/E-Sports%20events%20Rule%20Book.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- close card-->
+                            <div class="card">
+                                <div class="card-header" id="infraeleven">
+                                    <a href="#collapseeleven" data-toggle="collapse" data-target="#collapseeleven" aria-expanded="false" aria-controls="collapseeleven">
+                                        <p class="mb-0">
+                                            3. Valorant
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="collapseeleven" class="collapse" aria-labelledby="infraeleven" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Valorant is a team-based tactical shooter and first-person shooter set in the near future. Players play as one of a set of agents, characters designed based on several countries and cultures around the world. In the main game mode, players are assigned
+                                        to either the attacking or defending team with each team having five players on it. Agents have unique abilities, each requiring charges, as well as a unique ultimate ability that requires charging through kills,
+                                        deaths, or spike actions.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/E-Sports%20events%20Rule%20Book.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- close card-->
+                            <div class="card">
+                                <div class="card-header" id="infratwelve">
+                                    <a href="#collapsetwelve" data-toggle="collapse" data-target="#collapsetwelve" aria-expanded="false" aria-controls="collapsetwelve">
+                                        <p class="mb-0">
+                                            4. Chess
+                                        </p>
+                                    </a>
+                                </div>
+                                <div id="collapsetwelve" class="collapse" aria-labelledby="infratwelve" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Chess is an abstract strategy game and involves no hidden information. It is played on a square chessboard with 64 squares arranged in an eight-by-eight grid. At the start, each player (one controlling the white pieces, the other controlling the black
+                                        pieces) controls sixteen pieces: one king, one queen, two rooks, two knights, two bishops, and eight pawns. The object of the game is to checkmate the opponent's king, whereby the king is under immediate attack
+                                        (in "check") and there is no way to remove it from attack on the next move. There are also several ways a game can end in a draw.
+                                    </div>
+                                    <div>
+                                        <center><a href="pdf/E-Sports%20events%20Rule%20Book.pdf"><button class="download"> Download Brochure</button></a></center>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- close card-->
+
+                        </div>
+
+                    </div>
+                    <!-- tab content-->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="sponsor" class="section wb">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Contact Our Team</h3>
+                <p>Questions not answered yet? We are here to help!</p>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3> YASH CHAJJER<br> ( Technical )</h3>
+                                <p class="lead">7073720488</p>
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_01.png" alt="" class="img-fluid">
+                                <h4> </h4>
+                            </div>
+
+                        </div>
+
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3> CHITRANSH GAUR<br>( Cultural )</h3>
+                                <p class="lead">8829822113</p>
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_02.png" alt="" class="img-fluid">
+                                <h4> </h4>
+                            </div>
+
+                        </div>
+
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3> PRATEEK CHAUDARY <br> ( Sports )</h3>
+                                <p class="lead">9636234734 </p>
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_03.png" alt="" class="img-fluid">
+                                <h4></h4>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--	<div id="faq" class="section lb">
+		<div class="container">
+			<div class="section-title text-center">
+                <h3>FAQ'S</h3>
+                <p>content</p>
+            </div><!-- end title -->
+
+    <!--	<div class="row">
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<figure class="snip1401 ">
+                        
+						<div><font color="white"><center>1. Question ?</center></font></div>
+                        <img src="css/faq1.jpg" alt="" />
+                        
+						<figcaption>
+							<h3>hi</h3>
+							<p>hello</p>
+							<ul>
+                                <li>by admin</li>
+                                <li>date</li>
+                                <li>Comments</li>
+                            </ul>
+						</figcaption>
+						<i class="ion-ios-home-outline"></i>
+						<a href="#"></a>
+					</figure>
+				</div>
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<figure class="snip1401">
+						<div><font color="white"><center>1. Question ?</center></font></div>
+                        <img src="css/faq2.jpg" alt="" />
+						<figcaption>
+							<h3>hello</h3>
+							<p>hey</p>
+							<ul>
+                                <li>by admin</li>
+                                <li>date</li>
+                                <li>Comments</li>
+                            </ul>
+						</figcaption>
+						<i class="ion-ios-home-outline"></i>
+						<a href="#"></a>
+					</figure>
+				</div>
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<figure class="snip1401">
+						<div><font color="white"><center>1. Question ?</center></font></div>
+                        <img src="css/faq3.jpg" alt="" />
+						<figcaption>
+							<h3>hey</h3>
+							<p>hello</p>
+							<ul>
+                                <li>by admin</li>
+                                <li>date</li>
+                                <li>Comments</li>
+                            </ul>
+						</figcaption>
+						<i class="ion-ios-home-outline"></i>
+						<a href="#"></a>
+					</figure>
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<figure class="snip1401">
+						<div><font color="white"><center>1. Question ?</center></font></div>
+                        <img src="css/faq4.jpg" alt="" />
+						<figcaption>
+							<h3>hi</h3>
+							<p>hello</p>
+							<ul>
+                                <li>by admin</li>
+                                <li>date</li>
+                                <li>Comments</li>
+                            </ul>
+						</figcaption>
+						<i class="ion-ios-home-outline"></i>
+						<a href="#"></a>
+					</figure>
+				</div>
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<figure class="snip1401">
+						<div><font color="white"><center>1. Question ?</center></font></div>
+                        <img src="css/faq5.jpg" alt="" />
+						<figcaption>
+							<h3>hello</h3>
+							<p>hey</p>
+							<ul>
+                                <li>by admin</li>
+                                <li>date</li>
+                                <li>Comments</li>
+                            </ul>
+						</figcaption>
+						<i class="ion-ios-home-outline"></i>
+						<a href="#"></a>
+					</figure>
+				</div>
+				<div class="col-md-4 col-sm-6 col-lg-4">
+					<figure class="snip1401">
+						<div><font color="white"><center>1. Question ?</center></font></div>
+                        <img src="css/faq6.jpg" alt="" />
+						<figcaption>
+							<h3>hey</h3>
+							<p>hello</p>
+							<ul>
+                                <li>by admin</li>
+                                <li>date</li>
+                                <li>Comments</li>
+                            </ul>
+						</figcaption>
+						<i class="ion-ios-home-outline"></i>
+						<a href="#"></a>
+					</figure>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+-->
+    <!--
+    <div id="contact" class="section db">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Contact Us</h3>
+                <p>For any query </p>
+            </div><!-- end title -->
+
+    <!--   <div class="row">
+                <div class="col-md-12">
+                  <!--   <div class="contactname"> 
+                        <div class="cname">
+                          <p><font size="4px"><strong>YASH CHHAJER</strong></font><br>7073720488</p>
+                           
+                        </div>
+                        <div class="cname">
+                          <p><font size="4px"><strong>CHITRANSH GAUR</strong></font><br>8829822113</p>
+                        </div>
+                        <div class="cname">
+                        <p><font size="4px"><strong>PRATEEK CHAUDARY</strong></font><br>9636234734</p>
+                        </div>
+                    
+                    
+                    </div>  -->
+    <!--      <div class="contact_form">
+                        <div id="message"></div>
+                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<input class="form-control" id="name" type="text" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name.">
+										<p class="help-block text-danger"></p>
+									</div>
+									<div class="form-group">
+										<input class="form-control" id="email" type="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email address.">
+										<p class="help-block text-danger"></p>
+									</div>
+									<div class="form-group">
+										<input class="form-control" id="phone" type="tel" placeholder="Your Phone" required="required" data-validation-required-message="Please enter your phone number.">
+										<p class="help-block text-danger"></p>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<textarea class="form-control" id="message" placeholder="Your Message" required="required" data-validation-required-message="Please enter a message."></textarea>
+										<p class="help-block text-danger"></p>
+									</div>
+								</div>
+								<div class="clearfix"></div>
+								<div class="col-lg-12 text-center">
+									<div id="success"></div>
+									<button id="sendMessageButton" class="sim-btn btn-new from-middle animated" data-text="Send Message" type="submit">Send Message</button>
+								</div>
+							</div>
+						</form>
+                    </div>  
+                </div><!-- end col -->
+    <!--     </div><!-- end row -->
+    <!-- </div><!-- end container -->
+    <!--  </div><!-- end section -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-company-name">Copyright &copy; JECRC UNIVERSITY </p>
+                    <p> Made with &hearts; by
+                        <a href="https://www.linkedin.com/in/vaishnavi-vaishnav-2016961b9/">
+                            <font color="white"><strong>  &nbsp;Vaishnavi Vaishnav &nbsp;</strong> </font>
+                        </a>&
+                        <a href="
+https://www.linkedin.com/in/jheel-soni/">
+                            <font color="white"><strong>  &nbsp;Jheel Soni &nbsp;</strong> </font>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- end container -->
+    </div>
+    <!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- Camera Slider -->
+    <script src="js/jquery.mobile.customized.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/parallaxie.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/animated-slider.js"></script>
+    <!-- Contact form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
