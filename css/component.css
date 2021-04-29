@@ -66,8 +66,7 @@ a, li {
 .nav ul {
 	max-width: 1250px;
 	margin: auto;
-     padding-left: 280px; 
-    padding: auto;
+     padding-left: 25%;
 	font-size: 1.2em;
     width: 100%;
 }
